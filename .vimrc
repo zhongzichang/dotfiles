@@ -53,6 +53,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'AndrewRadev/splitjoin.vim' " struct split and join
 Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy file, buffer, mru, tag, etc finder
 Plugin 'dyng/ctrlsf.vim' " Text Searching mimics Ctrl-Shift-F on Sublime Text 2
+Plugin 'easymotion/vim-easymotion'
 Plugin 'mg979/vim-visual-multi', {'branch': 'master'} " Multiple cursors
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'} " Status Line
 Plugin 'preservim/nerdtree' " File folder tree explorer
