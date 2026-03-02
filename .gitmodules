@@ -2,71 +2,71 @@
     path = .vim/bundle/Vundle.vim
     url = https://github.com/VundleVim/Vundle.vim.git
 [submodule ".vim/bundle/ale"]
-      url = https://github.com/dense-analysis/ale.git
-          path = .vim/bundle/ale
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/ilyachur/cmake4vim.git
-          path = .vim/bundle/cmake4vim
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/kien/ctrlp.vim.git
-          path = .vim/bundle/ctrlp.vim
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/dyng/ctrlsf.vim.git
-          path = .vim/bundle/ctrlsf.vim
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/yegappan/grep.git
-          path = .vim/bundle/grep
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/Yggdroot/indentLine.git
-          path = .vim/bundle/indentLine
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/preservim/nerdtree.git
-          path = .vim/bundle/nerdtree
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/powerline/powerline.git
-          path = .vim/bundle/powerline
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/AndrewRadev/splitjoin.vim.git
-          path = .vim/bundle/splitjoin.vim
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/altercation/vim-colors-solarized.git
-          path = .vim/bundle/vim-colors-solarized
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/tpope/vim-commentary.git
-          path = .vim/bundle/vim-commentary
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/tpope/vim-dispatch.git
-          path = .vim/bundle/vim-dispatch
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/easymotion/vim-easymotion.git
-          path = .vim/bundle/vim-easymotion
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/nvie/vim-flake8.git
-          path = .vim/bundle/vim-flake8
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/tpope/vim-fugitive.git
-          path = .vim/bundle/vim-fugitive
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/fatih/vim-go.git
-          path = .vim/bundle/vim-go
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/yuezk/vim-js.git
-          path = .vim/bundle/vim-js
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/maxmellon/vim-jsx-pretty.git
-          path = .vim/bundle/vim-jsx-pretty
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/xolox/vim-lua-ftplugin.git
-          path = .vim/bundle/vim-lua-ftplugin
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/preservim/vim-markdown.git
-          path = .vim/bundle/vim-markdown
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/xolox/vim-misc.git
-          path = .vim/bundle/vim-misc
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/mg979/vim-visual-multi.git
-          path = .vim/bundle/vim-visual-multi
-[submodule ".vim/bundle/ale"]
-      url = https://github.com/jnurmine/Zenburn.git
-          path = .vim/bundle/Zenburn
+    url = https://github.com/dense-analysis/ale.git
+    path = .vim/bundle/ale
+[submodule ".vim/bundle/cmake4vim"]
+    url = https://github.com/ilyachur/cmake4vim.git
+    path = .vim/bundle/cmake4vim
+[submodule ".vim/bundle/ctrlp.vim"]
+    url = https://github.com/kien/ctrlp.vim.git
+    path = .vim/bundle/ctrlp.vim
+[submodule ".vim/bundle/ctrlsf.vim"]
+    url = https://github.com/dyng/ctrlsf.vim.git
+    path = .vim/bundle/ctrlsf.vim
+[submodule ".vim/bundle/grep"]
+    url = https://github.com/yegappan/grep.git
+    path = .vim/bundle/grep
+[submodule ".vim/bundle/indentLine"]
+    url = https://github.com/Yggdroot/indentLine.git
+    path = .vim/bundle/indentLine
+[submodule ".vim/bundle/nerdtree"]
+    url = https://github.com/preservim/nerdtree.git
+    path = .vim/bundle/nerdtree
+[submodule ".vim/bundle/powerline"]
+    url = https://github.com/powerline/powerline.git
+    path = .vim/bundle/powerline
+[submodule ".vim/bundle/splitjoin.vim"]
+    url = https://github.com/AndrewRadev/splitjoin.vim.git
+    path = .vim/bundle/splitjoin.vim
+[submodule ".vim/bundle/vim-colors-solarized"]
+    url = https://github.com/altercation/vim-colors-solarized.git
+    path = .vim/bundle/vim-colors-solarized
+[submodule ".vim/bundle/vim-commentary"]
+    url = https://github.com/tpope/vim-commentary.git
+    path = .vim/bundle/vim-commentary
+[submodule ".vim/bundle/vim-dispatch"]
+    url = https://github.com/tpope/vim-dispatch.git
+    path = .vim/bundle/vim-dispatch
+[submodule ".vim/bundle/vim-easymotion"]
+    url = https://github.com/easymotion/vim-easymotion.git
+    path = .vim/bundle/vim-easymotion
+[submodule ".vim/bundle/vim-flake8"]
+    url = https://github.com/nvie/vim-flake8.git
+    path = .vim/bundle/vim-flake8
+[submodule ".vim/bundle/vim-fugitive"]
+    url = https://github.com/tpope/vim-fugitive.git
+    path = .vim/bundle/vim-fugitive
+[submodule ".vim/bundle/vim-go"]
+    url = https://github.com/fatih/vim-go.git
+    path = .vim/bundle/vim-go
+[submodule ".vim/bundle/vim-js"]
+    url = https://github.com/yuezk/vim-js.git
+    path = .vim/bundle/vim-js
+[submodule ".vim/bundle/vim-jsx-pretty"]
+    url = https://github.com/maxmellon/vim-jsx-pretty.git
+    path = .vim/bundle/vim-jsx-pretty
+[submodule ".vim/bundle/vim-lua-ftplugin"]
+    url = https://github.com/xolox/vim-lua-ftplugin.git
+    path = .vim/bundle/vim-lua-ftplugin
+[submodule ".vim/bundle/vim-markdown"]
+    url = https://github.com/preservim/vim-markdown.git
+    path = .vim/bundle/vim-markdown
+[submodule ".vim/bundle/vim-misc"]
+    url = https://github.com/xolox/vim-misc.git
+    path = .vim/bundle/vim-misc
+[submodule ".vim/bundle/vim-visual-multi"]
+    url = https://github.com/mg979/vim-visual-multi.git
+    path = .vim/bundle/vim-visual-multi
+[submodule ".vim/bundle/Zenburn"]
+    url = https://github.com/jnurmine/Zenburn.git
+    path = .vim/bundle/Zenburn
