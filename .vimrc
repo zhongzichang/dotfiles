@@ -18,7 +18,7 @@ set foldlevel=99
 set foldmethod=indent
 set hidden
 set nocompatible              " required
-set number
+"set number
 set shiftwidth=2
 set showtabline=2
 set signcolumn=yes
@@ -62,6 +62,7 @@ Plugin 'tpope/vim-dispatch' " Asynchronous build and test dispatcher
 Plugin 'tpope/vim-fugitive' " Git wrapper
 Plugin 'Yggdroot/indentLine' " Display intention levels
 Plugin 'yegappan/grep' " Integrate Grep seach tools
+Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'dense-analysis/ale' " Check syntax asynchronously and fix files
 " Plugin 'godlygeek/tabular'
 " Plugin 'prabirshrestha/vim-lsp'
@@ -187,7 +188,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPBuffer'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
