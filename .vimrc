@@ -200,4 +200,52 @@ nnoremap <silent> <Leader>d :call SmartBufDelete()<CR>
 "let g:indentLine_setColors = 0
 let g:indentLine_setConceal = 0
 "let g:indentLine_color_term = 128
+" ============================================================================
+" Gutentags 配置
+" ============================================================================
 
+" 1. 开启 gutentags 模块
+let g:gutentags_modules = ['ctags']
+
+" 2. 设定项目根目录的标志（遇到这些文件或文件夹，就认为到了项目根目录）
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+
+" 3. 自动生成的 tags 文件名
+let g:gutentags_ctags_tagfile = '.tags'
+
+" 4. 【关键】将自动生成的 tags 文件集中存放在一个固定的缓存目录，避免污染源码
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+
+" 如果缓存目录不存在，则自动创建
+if !isdirectory(g:gutentags_cache_dir)
+   call mkdir(g:gutentags_cache_dir, 'p')
+endif
+
+" 5. 配置 ctags 的参数
+let g:gutentags_ctags_extra_args = [
+            \ '--tag-relative=yes',
+            \ '--fields=+ailmnS',
+            \ '--extra=+q',
+            \ '--c++-kinds=+cxzn',
+            \ '--c-kinds=+cxzn',
+            \ ]
+
+" 6. 排除不需要生成 tags 的大型文件夹或特定文件类型
+let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'xxd']
+let g:gutentags_ctags_exclude = [
+            \ '*.git', '*.svg', '*.hg',
+            \ '*/tests/*',
+            \ 'build',
+            \ 'dist',
+            \ 'bin',
+            \ 'node_modules',
+            \ 'bower_components',
+            \ 'cache',
+            \ 'compiled',
+            \ 'docs',
+            \ 'bundle',
+            \ 'vendor',
+            \ '*.md',
+            \ '*.json',
+            \ '*.js',
+            \ ]
