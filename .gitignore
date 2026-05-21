@@ -1,0 +1,4 @@
+# 忽略 ctags 生成的文件
+tags
+tags.lock
+tags.temp

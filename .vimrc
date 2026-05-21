@@ -24,6 +24,7 @@ set showtabline=2
 set signcolumn=yes
 set softtabstop=2
 set tabstop=2
+set t_Co=256
 
 filetype off                  " required
 let mapleader = ","
@@ -57,21 +58,21 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'mg979/vim-visual-multi', {'branch': 'master'} " Multiple cursors
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'} " Status Line
 Plugin 'preservim/nerdtree' " File folder tree explorer
-Plugin 'tpope/vim-commentary' " Comment stuff out
-Plugin 'tpope/vim-dispatch' " Asynchronous build and test dispatcher
-Plugin 'tpope/vim-fugitive' " Git wrapper
 Plugin 'Yggdroot/indentLine' " Display intention levels
 Plugin 'yegappan/grep' " Integrate Grep seach tools
 Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'dense-analysis/ale' " Check syntax asynchronously and fix files
-" Plugin 'godlygeek/tabular'
-" Plugin 'prabirshrestha/vim-lsp'
-" Plugin 'rhysd/vim-lsp-ale'
-" Plugin 'mattn/vim-lsp-settings'
-" Plugin 'prabirshrestha/asyncomplete.vim'
-" theme
-Plugin 'altercation/vim-colors-solarized' " Precision colorscheme
-Plugin 'jnurmine/Zenburn' " A low-contrast color scheme
+
+"Plugin 'tpope/vim-fugitive' " Git wrapper
+"Plugin 'tpope/vim-commentary' " Comment stuff out
+"Plugin 'dense-analysis/ale' " Check syntax asynchronously and fix files
+"Plugin 'tpope/vim-dispatch' " Asynchronous build and test dispatcher
+"Plugin 'godlygeek/tabular'
+"Plugin 'prabirshrestha/vim-lsp'
+"Plugin 'rhysd/vim-lsp-ale'
+"Plugin 'mattn/vim-lsp-settings'
+"Plugin 'prabirshrestha/asyncomplete.vim'
+"Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+"
 " program language
 Plugin 'fatih/vim-go' " go
 Plugin 'yuezk/vim-js' " Syntax highlighting for javascript and Flow.js
@@ -81,35 +82,19 @@ Plugin 'xolox/vim-lua-ftplugin' " lua
 Plugin 'preservim/vim-markdown' " markdown
 Plugin 'nvie/vim-flake8' " Static syntax and style checker for python
 Plugin 'ilyachur/cmake4vim' " cmake
+" theme
+Plugin 'altercation/vim-colors-solarized' " Precision colorscheme
+Plugin 'jnurmine/Zenburn' " A low-contrast color scheme
+Plugin 'arcticicestudio/nord-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Map <F6> to the Debug executable with passed filename
-function SetBinaryDebug(filename)
-    let bpath = getcwd() . "/bin/Debug/" . a:filename
-    execute "nnoremap <F6> :Dispatch "
-            \ bpath
-            \ . " <CR> <bar> :Copen<CR>"
-    echo "<F6> will run: " . bpath
-endfunction
-
-" Map <F7> to the Release executable with passed filename
-function SetBinaryRelease(filename)
-    let bpath = getcwd() . "/bin/Release/" . a:filename 
-    execute "nnoremap <F7> :Dispatch "
-                \ bpath 
-                \ . "<CR> <bar> :Copen<CR>"
-    echo "<F7> will run: " . bpath
-endfunction
-
-
 " NERDTree
 let g:NERDTreeFileLines = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-Q> :NERDTree<CR>
 " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
@@ -149,16 +134,17 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 let python_highlight_all=1
 
+" color theme -------
 syntax enable 
+let g:solarized_termcolors=256
+set background=dark
 if has('gui_running')
-  set background=dark
   colorscheme solarized
 else
-  colorscheme zenburn
+  colorscheme nord
 endif
 
 call togglebg#map("<F5>")
-
 
 " golang ------
 
@@ -178,16 +164,13 @@ let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_metalinter_deadline = "5s"
 
-" c++
-" ale
-let g:ale_linters = { 'cpp': ['clangd', 'clangtidy'] }
-let g:ale_fixers = { 'cpp': ['clangformat']}
-
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = '\v[\/]build$'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
@@ -213,6 +196,8 @@ function! SmartBufDelete()
 endfunction
 nnoremap <silent> <Leader>d :call SmartBufDelete()<CR>
 
-
-
+" intentLine
+"let g:indentLine_setColors = 0
+let g:indentLine_setConceal = 0
+"let g:indentLine_color_term = 128
 
